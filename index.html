@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Loan Calculator</h2>
+        <form id="loanForm">
+            <div class="input-group">
+                <label for="loanAmount">Loan Amount (₹)</label>
+                <input type="number" id="loanAmount" required>
+            </div>
+            <div class="input-group">
+                <label for="interestRate">Interest Rate (%)</label>
+                <input type="number" id="interestRate" required>
+            </div>
+            <div class="input-group">
+                <label for="installments">Number of Installments</label>
+                <input type="number" id="installments" required>
+            </div>
+            <div class="input-group">
+                <label for="frequency">Payment Frequency</label>
+                <select id="frequency">
+                    <option value="monthly">Monthly</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="halfyearly">Half-Yearly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="startDate">Installment Start Date</label>
+                <input type="date" id="startDate" required>
+            </div>
+            <button type="submit" class="btn">Calculate</button>
+        </form>
+
+        <div id="result" class="result">
+            <h3>Results</h3>
+            <p><strong>EMI Amount:</strong> ₹<span id="emiAmount">0</span></p>
+            <p><strong>Loan Expiry Date:</strong> <span id="expiryDate">N/A</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
